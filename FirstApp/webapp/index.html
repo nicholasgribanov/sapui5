@@ -11,13 +11,17 @@
 			data-sap-ui-theme="sap_bluecrystal"
 			data-sap-ui-libs="sap.m"
 			data-sap-ui-compatVersion="edge"
-			data-sap-ui-preload="async">
+			data-sap-ui-preload="async"
+			data-sap-ui-resourceroots='{"opensap.firstapp":"./"}'
+			>
 		</script>
 
 
 		<script>
 			sap.ui.getCore().attachInit(function () {
-				alert("SAPUI5 is ready");
+				sap.ui.xmlview({
+					viewName: "opensap.firstapp.view.App"
+				}).placeAt("content");
 			});
 		</script>
 		
