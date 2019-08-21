@@ -19,8 +19,8 @@
 
 		<script>
 			sap.ui.getCore().attachInit(function () {
-				sap.ui.xmlview({
-					viewName: "opensap.firstapp.view.App"
+				new sap.ui.core.ComponentContainer({
+					name: "opensap.firstapp"
 				}).placeAt("content");
 			});
 		</script>
