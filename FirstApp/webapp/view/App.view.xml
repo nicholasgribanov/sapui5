@@ -2,12 +2,20 @@
 	displayBlock="true"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
+	controllerName="opensap.firstapp.controller.App"
 	>
 	<Carousel>
 		<pages>
-			<Image src="https://www.severstal.com/files/27647/1172x298_desctop_4.jpg" height="300px" />
-			<Image src="https://www.severstal.com/files/9941/triplets.jpg" height="300px" />
-			<Image src="https://www.severstal.com/files/9941/triplets.jpg" height="300px" />
+			<Image 
+				src="https://www.severstal.com/files/27647/1172x298_desctop_4.jpg" height="300px" />
+			<Image 
+				src="https://www.severstal.com/files/9941/triplets.jpg" height="300px" />
+			<Image 
+				src="https://www.severstal.com/files/9941/triplets.jpg" height="300px" />
 		</pages>
 	</Carousel>
+	<Button
+		text="Say Hello!"
+		press="onShowHello"
+	/>
 </mvc:View>
