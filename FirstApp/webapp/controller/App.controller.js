@@ -1,9 +1,12 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-	"sap/m/MessageToast"
-], function (Controller, MessageToast) {
+	"sap/m/MessageToast",
+	"opensap/firstapp/model/formatter"
+], function (Controller, MessageToast, formatter) {
 	"use strict";
 	return Controller.extend("opensap.firstapp.controller.App", {
+		
+		formatter: formatter,
 
 		onShowHello: function () {
 			var oBundle = this.getView().getModel("i18n").getResourceBundle();
