@@ -28,6 +28,16 @@ sap.ui.define([
 				aFilter.push(new Filter("ProductID", FilterOperator.Contains, sQuery));
 			}
 			oBinding.filter(aFilter);
+		},
+		
+		onItemSelected: function(oEvent) {
+			var oSelectedItem = oEvent.getSource();
+			var oContext = oSelectedItem.getBindingContext();
+			var sPath = oContext.getPath();
+			var oProductDetailPanel = this.byId("productDetailsPanel");
+			
+			oProductDetailPanel.bindElement({path:sPath});
+			this.byId("productDetailsPanel").setVisible(true);
 		}
 
 	});
